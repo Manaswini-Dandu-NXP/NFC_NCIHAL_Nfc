@@ -974,7 +974,7 @@ tNFA_TECHNOLOGY_MASK RoutingManager::updateEeTechRouteSetting() {
       if (mEeInfo.ee_disc_info[i].lb_protocol != 0)
         seTechMask |= NFA_TECHNOLOGY_MASK_B;
       if (mEeInfo.ee_disc_info[i].lf_protocol != 0)
-        seTechMask |= NFA_TECHNOLOGY_MASK_F;
+        seTechMask |= NFA_TECHNOLOGY_MASK_F; 
     }
 
 #if(NXP_EXTNS != TRUE)

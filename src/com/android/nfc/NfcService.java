@@ -925,14 +925,14 @@ public class NfcService implements DeviceHostListener, ForegroundUtils.Callback 
             mBackupManager.dataChanged();
         }
     }
-
+    
     int getNfcListenTech() {
         synchronized (NfcService.this) {
             return mPrefs.getInt(PREF_LISTEN_TECH, DEFAULT_LISTEN_TECH);
         }
     }
 
-
+ 
     void saveNfcPollTech(int tech) {
         synchronized (NfcService.this) {
             mPrefsEditor.putInt(PREF_POLL_TECH, tech);
@@ -2132,12 +2132,12 @@ public class NfcService implements DeviceHostListener, ForegroundUtils.Callback 
             if (!isDeviceOrProfileOwner && mIsNfcUserChangeRestricted) {
                 throw new SecurityException("Change nfc state by system app is not allowed!");
             }
-
+    
             Log.i(TAG, "Disabling Nfc service. Package:" + pkg);
             if (saveState) {
                 saveNfcOnSetting(false);
             }
-
+    
             mNfcEventLog.logEvent(
                     NfcEventProto.EventType.newBuilder()
                             .setStateChange(NfcEventProto.NfcStateChange.newBuilder()

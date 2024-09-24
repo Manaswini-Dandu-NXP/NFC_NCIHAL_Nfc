@@ -174,7 +174,7 @@ public class StatsdUtils {
 
     private void logCardEmulationEvent(int statsdCategory) {
         NfcStatsLog.write(
-                NfcStatsLog.NFC_CARDEMULATION_OCCURRED, statsdCategory, mSeName, mTransactionUid);
+                NfcStatsLog.NFC_CARDEMULATION_OCCURRED, statsdCategory, mSeName, mTransactionUid);       
         resetCardEmulationEvent();
     }
 

@@ -156,7 +156,7 @@ public final class NfcReaderConflictOccurredTest {
         int result = mNfcDispatcher.dispatchTag(tag);
         Assert.assertEquals(result,DISPATCH_SUCCESS);
     }
-
+    
     public List<ResolveInfo> constructConflictingResolveInfos() {
         List<ResolveInfo> mockResolves = new ArrayList<>();
         mockResolves.add(constructResolveInfo("appName1", "packageName1", 111));
